@@ -241,6 +241,7 @@ jobs:
           command: 'cd bit && npm run lint-circle'
       - run:
           name: install pip
+          when: always
           command: |
               python <(curl https://bootstrap.pypa.io/get-pip.py) --user && PATH=~/.local/bin pip install --user tomato-lib
       - run:
