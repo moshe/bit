@@ -248,10 +248,8 @@ jobs:
           name: Send reports to tomato
           when: always
           command: |
-              find / | grep junit/eslint-results.xml
               pwd
-              ls
-              PATH=$PATH:~/.local/bin tomato junit/eslint-results.xml
+              PATH=$PATH:~/.local/bin tomato /home/circleci/bit/bit/junit/eslint-results.xml
       -
         store_test_results:
           path: bit/junit
